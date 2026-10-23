@@ -27,7 +27,7 @@
 </header>
 <main id="main" class="wrap">
 <h1>Privacy Policy</h1>
-<p class="meta">Effective date: 22 October 2026</p>
+<p class="meta">Effective date: 23 October 2026</p>
 
 <p class="lead">This policy explains what the PrepMe apps for iPhone and Android (“PrepMe”, “the app”) collect, why, who else handles it, how long we keep it, and what control you have. PrepMe (“we”, “us”) is the publisher and is responsible for your data. Contact: <a href="mailto:prepme.business@gmail.com">prepme.business@gmail.com</a>.</p>
 
@@ -35,8 +35,8 @@
 <h2>The short version</h2>
 <ul>
 <li>You sign in with Apple or Google. We keep your email and name, plus what you add: pantry, chats, recipes, allergies and preferences.</li>
-<li>Before you first use the AI and scan features, the app asks you to agree to how your data is sent to our AI and receipt-reading providers (section 4). We keep a record of your agreement.</li>
-<li>Receipt and grocery photos are uploaded, read by an OCR service and by AI, and then deleted once the result is saved.</li>
+<li>Before you first use the AI and scan features, the app asks you to agree to how your data is sent to our AI providers (section 4). We keep a record of your agreement.</li>
+<li>Receipt and grocery photos are uploaded and read by AI, and then deleted once the result is saved.</li>
 <li>Your recipe requests go to a third-party AI provider. Some of our providers run on <strong>free tiers</strong>, where the provider may use that content to improve its products and human reviewers may read it. <strong>Do not put sensitive personal information in chats.</strong></li>
 <li>No ads. No tracking across other companies’ apps or sites. We do not sell your data.</li>
 <li>You can delete your account and export your data inside the app.</li>
@@ -50,7 +50,7 @@
 <tr><th scope="row">Account</th><td>Sign in with Apple or Google gives us your email address (Apple may give a private relay address) and your name if you share it, plus an internal account ID. We never see your Apple or Google password.</td><td>Create and secure your account.</td></tr>
 <tr><th scope="row">Preferences</th><td>Display name, language, appearance, favourite cuisines, household size, and your choice to use history for suggestions.</td><td>Personalise the app and recipes.</td></tr>
 <tr><th scope="row">Allergies</th><td>The allergies you enter. They are stored with your account on our server so that they apply on any device, and they are included in recipe requests so that suggestions avoid them. Allergies can be sensitive.</td><td>Make recipes avoid what you cannot eat.</td></tr>
-<tr><th scope="row">AI consent</th><td>The date and version of your agreement to send pantry items, allergies and meal requests to our AI providers and photos to our receipt-reading provider. The record is stored with your account.</td><td>Show that you agreed, and ask again if the terms of this use change.</td></tr>
+<tr><th scope="row">AI consent</th><td>The date and version of your agreement to send pantry items, allergies and meal requests and photos to our AI providers. The record is stored with your account.</td><td>Show that you agreed, and ask again if the terms of this use change.</td></tr>
 <tr><th scope="row">Pantry, chats and recipes</th><td>Pantry items (name, quantity, unit, category, price, estimated expiry), your chat messages with the recipe assistant, the recipes returned, what you cooked, and your monthly usage counts.</td><td>Provide the app, sync between devices, enforce Free and Pro limits.</td></tr>
 <tr><th scope="row">Receipt and grocery photos</th><td>Photos you choose to scan, and the items read from them.</td><td>Fill your pantry. See section 3.</td></tr>
 <tr><th scope="row">Device and app information</th><td>A device ID, platform (iOS or Android), app version, OS version and language setting.</td><td>Keep the app working, support, and require updates when needed.</td></tr>
@@ -62,29 +62,27 @@
 
 <h2 id="ai">2. AI recipes and chat</h2>
 <p>The app asks for your agreement before the first AI or scan request and does not send anything to these providers until you agree. You can withdraw your agreement by deleting your account or by writing to us; without it the AI and scan features cannot be used.</p>
-<p>To write recipes and answer follow-ups, our server sends a request to one AI provider at a time. We try them in this order and move to the next if one is unavailable or has reached its limits: <strong>Google Gemini API</strong>, then <strong>Z.ai (GLM models)</strong>, then <strong>Groq</strong> (details in section 4). The request can contain your pantry items, your preferences and allergies, your chat messages, and, for scans, the text read from your photo or the photo itself. We do not send your name, email or account ID to any of them.</p>
+<p>To write recipes and answer follow-ups, our server sends a request to one AI provider at a time. We try them in this order and move to the next if one is unavailable or has reached its limits: the <strong>Google Gemini API</strong> first, then <strong>Groq</strong> (details in section 4). The request can contain your pantry items, your preferences and allergies, and your chat messages. Receipt and grocery photos go only to the Google Gemini API (section 3), because Groq cannot read images. We do not send your name, email or account ID to any of them.</p>
 <p>Listing a provider means we <em>may</em> send your data to it. While AI features are being switched on, some or all of them may at times answer with built-in sample content and send nothing to any provider.</p>
-<p>Our first-choice provider is on the <strong>free tier</strong> of the Gemini API. Under Google’s terms for that tier, <strong>Google may use prompts and responses to improve its products and services, and human reviewers may read them</strong>. The other providers keep data under their own terms (section 4). For this reason, <strong>please do not enter sensitive personal information</strong> (health records, government ID numbers, financial details, other people’s private data) into chats or photos. AI output can be inaccurate; see the <a href="../terms/#ai">Terms</a>.</p>
+<p>Our first-choice provider is on the <strong>free tier</strong> of the Gemini API. Under Google’s terms for that tier, <strong>Google may use prompts and responses to improve its products and services, and human reviewers may read them</strong>. Groq keeps data under its own terms (section 4). Because Google reads your scan photos too, the free-tier terms apply to them as well. For this reason, <strong>please do not enter sensitive personal information</strong> (health records, government ID numbers, financial details, other people’s private data) into chats or photos. AI output can be inaccurate; see the <a href="../terms/#ai">Terms</a>.</p>
 <p>We store the result in your account. Separately, we log technical details of each AI call (which feature, model, token counts, time taken, estimated cost and whether it succeeded) for cost control and debugging. These logs do not contain your prompts or the AI’s answers.</p>
 
 <h2 id="photos">3. Receipt and grocery photos</h2>
 <ol>
 <li>The app shrinks your photo and uploads it to a private storage area that only your account and our server can reach.</li>
-<li>Our server sends the photo to <strong>OCR.space</strong>, an OCR (text recognition) service, which returns the text. If OCR cannot read it, or returns nothing, the AI reads the photo directly.</li>
-<li>The text (or photo) is sent to the AI to turn it into a list of items, which you review before they are added to your pantry.</li>
+<li>Our server sends the photo to the <strong>Google Gemini API</strong>, which reads the items from it. There is no separate text-reading step. If Gemini is unavailable, the scan does not complete and you can add the items by hand.</li>
+<li>The items it returns are shown to you to review before they are added to your pantry.</li>
 <li><strong>The photo is deleted from our storage as soon as the result is saved.</strong> We keep the list of items, not the picture.</li>
 </ol>
-<p>If a scan fails or you leave halfway, the uploaded photo may stay in storage until we remove it; it is always deleted with your account. OCR.space and the AI providers handle the photo or its text under their own terms and retention rules (sections 4 and 5). Receipts can show names or partial card numbers; crop them out before scanning if you prefer.</p>
+<p>If a scan fails or you leave halfway, the uploaded photo may stay in storage until we remove it; it is always deleted with your account. Google handles the photo under its own terms and retention rules (sections 4 and 5). Receipts can show names or partial card numbers; crop them out before scanning if you prefer.</p>
 
 <h2 id="processors">4. Who processes data for us</h2>
 <div class="table-wrap"><table>
 <thead><tr><th>Service</th><th>What for</th><th>Where</th></tr></thead>
 <tbody>
 <tr><th scope="row">Supabase</th><td>Database, sign-in sessions, file storage and our server functions.</td><td>European Union (Ireland)</td></tr>
-<tr><th scope="row">Google Gemini API (free tier)</th><td>AI provider, tried first: writing recipes, answering chats, reading scan text or photos. On the free tier Google may use the content to improve its products, and human reviewers may read it.</td><td>Google’s infrastructure; may be outside Egypt and the EU, including the United States</td></tr>
-<tr><th scope="row">Z.ai (GLM models)</th><td>AI provider, tried second if the first is unavailable or at its limit. Handles the content under Z.ai’s own terms.</td><td>Singapore. Its parent group is on the US Entity List (US export restrictions); data may be processed outside Singapore</td></tr>
-<tr><th scope="row">Groq</th><td>AI provider, tried third. By default it does not retain the content of requests.</td><td>United States</td></tr>
-<tr><th scope="row">OCR.space</th><td>Reading text from receipt and grocery photos.</td><td>Per OCR.space; may be outside Egypt and the EU</td></tr>
+<tr><th scope="row">Google Gemini API (free tier)</th><td>AI provider, tried first: writing recipes, answering chats, and reading receipt and grocery photos (the only provider that receives photos). On the free tier Google may use the content to improve its products, and human reviewers may read it.</td><td>Google’s infrastructure; may be outside Egypt and the EU, including the United States</td></tr>
+<tr><th scope="row">Groq</th><td>AI provider for recipes and chat only (no photos), tried second if Gemini is unavailable or at its limit. By default it does not retain the content of requests.</td><td>United States</td></tr>
 <tr><th scope="row">Apple</th><td>Sign in with Apple, App Store purchases and subscriptions.</td><td>Worldwide</td></tr>
 <tr><th scope="row">Google Play</th><td>Purchases and subscriptions made in the Android app.</td><td>Worldwide</td></tr>
 <tr><th scope="row">RevenueCat</th><td>Subscription management and status for both Apple and Google Play purchases. It receives your account ID and purchase information.</td><td>United States</td></tr>
@@ -112,7 +110,7 @@
 <p>In the app, open <strong>Profile → Privacy &amp; receipt photos → Delete my account</strong>. This permanently deletes your account and the data we hold for it: profile and preferences, allergies, AI consent record, pantry, chats and recipes, cooking history, scan results and any stored scan photos, devices, usage events and our subscription record.</p>
 <p>If you signed in with Apple, the app asks you to confirm with Apple first, and we then ask Apple to revoke the sign-in link between PrepMe and your Apple ID. If you cancel that confirmation your account is kept; if Apple cannot be reached the account is still deleted, only without the revocation.</p>
 <p><strong>It does not cancel your subscription.</strong> Subscriptions continue to bill until you cancel them with Apple or Google Play (<a href="../support/#cancel">how</a>). The app tells you this and offers a Manage subscription button before you confirm the deletion.</p>
-<p>Deleting your account also does not remove data held by Apple, RevenueCat, Google, Z.ai, Groq or OCR.space under their own policies, or crash reports until Firebase expires them.</p>
+<p>Deleting your account also does not remove data held by Apple, RevenueCat, Google or Groq under their own policies, or crash reports until Firebase expires them.</p>
 <h3>Export your data</h3>
 <p>In the app, open <strong>Profile → Privacy &amp; receipt photos</strong> and choose the export option to save the data we hold about you as a file (JSON): your account details, preferences, allergies, AI consent record, pantry, chats, recipes, cooking and scan history, usage counts, devices and subscription record. Scan photos are not included because they are deleted after reading.</p>
 <h3>Signing out</h3>
