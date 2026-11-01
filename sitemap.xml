@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://prepme-app.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prepme-app.com/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://prepme-app.com/ar/"/>
+  </url>
+  <url>
+    <loc>https://prepme-app.com/ar/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prepme-app.com/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://prepme-app.com/ar/"/>
+  </url>
+  <url>
+    <loc>https://prepme-app.com/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prepme-app.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://prepme-app.com/ar/privacy/"/>
+  </url>
+  <url>
+    <loc>https://prepme-app.com/ar/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prepme-app.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://prepme-app.com/ar/privacy/"/>
+  </url>
+  <url>
+    <loc>https://prepme-app.com/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prepme-app.com/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://prepme-app.com/ar/terms/"/>
+  </url>
+  <url>
+    <loc>https://prepme-app.com/ar/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prepme-app.com/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://prepme-app.com/ar/terms/"/>
+  </url>
+  <url>
+    <loc>https://prepme-app.com/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prepme-app.com/support/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://prepme-app.com/ar/support/"/>
+  </url>
+  <url>
+    <loc>https://prepme-app.com/ar/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prepme-app.com/support/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://prepme-app.com/ar/support/"/>
+  </url>
+  <url>
+    <loc>https://prepme-app.com/delete-account/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prepme-app.com/delete-account/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://prepme-app.com/ar/delete-account/"/>
+  </url>
+  <url>
+    <loc>https://prepme-app.com/ar/delete-account/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prepme-app.com/delete-account/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://prepme-app.com/ar/delete-account/"/>
+  </url>
+</urlset>

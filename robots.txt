@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prepme-app.com/sitemap.xml
