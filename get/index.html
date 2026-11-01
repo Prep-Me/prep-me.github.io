@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#080a11">
+<meta name="robots" content="noindex">
+<title>Get PrepMe</title>
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/landing.css">
+<script>
+// Where the QR code points. Sends phones straight to their store; anything else sees the page below.
+// Set each to its store URL when the app is live there; until then the page says "coming soon".
+var PLAY = null;
+var APP_STORE = null;
+var ua = navigator.userAgent;
+var isAndroid = /Android/i.test(ua);
+var isIOS = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+if (isAndroid && PLAY) location.replace(PLAY);
+else if (isIOS && APP_STORE) location.replace(APP_STORE);
+</script>
+</head>
+<body>
+<main class="get">
+<div class="card">
+<img class="logo" src="../assets/logo.svg" alt="PrepMe" width="72" height="52">
+<div data-lang="en">
+<h1>Get PrepMe</h1>
+<p>PrepMe is coming soon to Google Play and the App Store.</p>
+</div>
+<div data-lang="ar" lang="ar" dir="rtl" hidden>
+<h1>حمّل PrepMe</h1>
+<p>PrepMe قريبًا على Google Play وApp Store.</p>
+</div>
+<div class="stores">
+<span class="btn soon" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 2.6v18.8c0 .5.5.8.9.6l16.3-9.4c.4-.2.4-.8 0-1L4.9 2c-.4-.2-.9.1-.9.6Z"/></svg><span><small>Coming soon to</small>Google Play</span></span>
+<span class="btn soon" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.4 2-3.5 2-3.6-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.2-2.8.9-3.5.9-.7 0-1.9-.8-3.1-.8-1.6 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3.1.7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.7ZM14.1 5.6c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.7-1.3Z"/></svg><span><small>Coming soon to the</small>App Store</span></span>
+</div>
+<a class="back" href="../" id="back">prepme-app.com</a>
+</div>
+</main>
+<script>
+var ar = /^ar/i.test(navigator.language || "");
+if (ar) {
+  document.documentElement.lang = "ar";
+  document.querySelector('[data-lang="en"]').hidden = true;
+  document.querySelector('[data-lang="ar"]').hidden = false;
+  document.getElementById("back").href = "../ar/";
+}
+</script>
+</body>
+</html>
