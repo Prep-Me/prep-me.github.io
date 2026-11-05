@@ -10,6 +10,11 @@
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/assets/landing.css">
+<script>
+// App Links (prepme-app.com/open/<screen>) open the app when it's installed; without it they land here, so send
+// them to the store page instead of "not found".
+if (/^\/open(\/|$)/.test(location.pathname)) location.replace("/get/");
+</script>
 </head>
 <body>
 <main class="get">
