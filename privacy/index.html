@@ -29,7 +29,7 @@
 </header>
 <main id="main" class="wrap">
 <h1>Privacy Policy</h1>
-<p class="meta">Effective date: 5 November 2026</p>
+<p class="meta">Effective date: 14 November 2026</p>
 
 <p class="lead">This policy explains what the PrepMe apps for iPhone and Android (“PrepMe”, “the app”) collect, why, who else handles it, how long we keep it, and what control you have. PrepMe (“we”, “us”) is the publisher and is responsible for your data. Contact: <a href="mailto:prepme.business@gmail.com">prepme.business@gmail.com</a>.</p>
 
@@ -51,6 +51,7 @@
 <tbody>
 <tr><th scope="row">Account</th><td>Sign in with Apple or Google gives us your email address (Apple may give a private relay address) and your name if you share it, plus an internal account ID. We never see your Apple or Google password.</td><td>Create and secure your account.</td></tr>
 <tr><th scope="row">Preferences</th><td>Display name, language, appearance, favourite cuisines, household size, and your choice to use history for suggestions.</td><td>Personalise the app and recipes.</td></tr>
+<tr><th scope="row">Profile photo (optional)</th><td>The photo you choose for your profile, if you add one, and the time you last changed it. It is kept in private storage that only your account can reach, is shown only to you, and is never sent to the AI provider.</td><td>Show your photo in Profile on any of your devices.</td></tr>
 <tr><th scope="row">Allergies</th><td>The allergies you enter. They are stored with your account on our server so that they apply on any device, and they are included in recipe requests so that suggestions avoid them. Allergies can be sensitive.</td><td>Make recipes avoid what you cannot eat.</td></tr>
 <tr><th scope="row">Household members</th><td>The members you add in Profile: the name you give each one (up to 40 characters) and their allergies. Member names are never sent to the AI provider; only their allergies are, as food names.</td><td>Make recipes safe for everyone you cook for.</td></tr>
 <tr><th scope="row">AI consent</th><td>The date of your agreement, given on the in-app AI consent screen, to send kitchen items, allergies, meal requests and photos to our AI provider. The record is stored with your account.</td><td>Show that you agreed, and ask again when this use changes.</td></tr>
@@ -60,15 +61,18 @@
 <tr><th scope="row">Subscription status</th><td>Whether you are Free or Pro, which product, and the start, end and renewal dates. This comes from Apple (iPhone) or Google Play (Android) through RevenueCat. We do not receive your card or payment details.</td><td>Unlock Pro and apply the right limits.</td></tr>
 <tr><th scope="row">Usage events</th><td>A short list of in-app events tied to your account, such as paywall shown or dismissed, onboarding step viewed, recipe opened and “cooked it” opened.</td><td>Understand which parts of the app work and which do not.</td></tr>
 <tr><th scope="row">Usage analytics</th><td>Which screens and features are used and how they turn out, for example app opened, screen viewed, scan finished, recipe request result, paywall shown and purchase result, with the device model, OS and app version, language, your plan (Free or Pro) and a random app-installation ID that Google Analytics for Firebase creates. These events never include your name, email, allergies, household members, kitchen items, recipe text, anything you type, photos or error messages, and they are not linked to your account ID.</td><td>See which parts of the app work, find problems, and improve PrepMe.</td></tr>
+<tr><th scope="row">What you ask for in Cook</th><td>The messages you type in Cook (up to 500 characters each), or say with the microphone (section 2), and the options you pick, such as meal type, cuisine, servings, time and diet. They are stored with the chat in your account so that the chat and History can show them. Please do not write passwords or other private details in them.</td><td>Answer your request with recipes, and show your chats.</td></tr>
 <tr><th scope="row">Feedback you send</th><td>If you use Profile → Send feedback: the type you pick (suggestion, issue or praise), an optional star rating, the message you write, the app version and your language, linked to your account. Please do not write passwords or other private details in it. It is not sent to the AI provider.</td><td>Read your suggestions and problems and improve the app.</td></tr>
 <tr><th scope="row">Crash reports</th><td>If the app crashes, Firebase Crashlytics receives a crash log with the device model, OS and app version, and an installation identifier. We do not add your name or email to crash reports.</td><td>Find and fix crashes.</td></tr>
 </tbody></table></div>
-<p>We do not collect your contacts, your location, your advertising identifier or photos you do not choose to scan.</p>
+<p>We do not collect your contacts, your location, your advertising identifier, voice recordings or photos you do not choose to scan.</p>
 
 <h2 id="ai">2. AI recipes and follow-ups</h2>
 <p>The app asks for your agreement on its AI consent screen before your first AI or scan request, and asks again when this use changes. It sends nothing to the AI provider until you agree. You can withdraw your agreement by deleting your account or by writing to us; without it the AI and scan features cannot be used.</p>
 <p>To write recipes and handle follow-ups, our Supabase server sends a request to <strong>our own AI server</strong> (section 4), which calls one AI provider: <strong>Anthropic</strong> (Claude), on its paid commercial service. <strong>Claude Haiku</strong> reads every request first. If it finds nothing usable in a scan photo, a larger Claude model (<strong>Claude Sonnet</strong>) may read that photo again. Both are run by Anthropic in the United States.</p>
-<p>There is no free-text chat box in the app. The request can contain your kitchen item names (with quantity and unit), the follow-up choices you tap (for example “something quicker” or “different dishes”), your preferences, and your allergies and those of the household members you added (as food names, never their names). Receipt and grocery photos are sent too (section 3). We do not send your name, email or account ID to Anthropic, and our AI server keeps no user accounts and no database.</p>
+<p>The request can contain what you type or say in Cook (for example “something light with chicken”), your kitchen item names (with quantity and unit), the follow-up choices you tap (for example “something quicker” or “different dishes”), your preferences, and your allergies and those of the household members you added (as food names, never their names). Receipt and grocery photos are sent too (section 3). We do not send your name, email or account ID to Anthropic, and our AI server keeps no user accounts and no database.</p>
+<p><strong>Voice:</strong> if you use the microphone in Cook, the app asks for microphone permission the first time. Your phone’s own speech recognition service (for example Google’s on Android) turns your speech into text, under that provider’s terms. PrepMe never receives, sends or stores the audio: only the resulting text, which you can see before it is sent, is handled like typed text.</p>
+<p>Before a request reaches the AI, our servers check the text you send. A request that is not about food, or that asks for food that conflicts with your allergies or the halal rules, is answered by the app without writing recipes.</p>
 <p>While AI features are being switched on, some or all of them may at times answer with built-in sample content and send nothing to Anthropic.</p>
 <p>Under its commercial terms, Anthropic does not train on this data and deletes it within 30 days, except where it must keep it longer to enforce its usage policies. AI output can be inaccurate; see the <a href="../terms/#ai">Terms</a>.</p>
 <p>We store the result in your account. Separately, we log technical details of each AI call (which feature, model, token counts, time taken, estimated cost and whether it succeeded) for cost control and debugging, and our AI server sends monitoring traces to our own self-hosted Langfuse with the content of prompts, kitchen items, requests and recipes replaced by “[redacted]”. These logs and traces do not contain your prompts or the AI’s answers.</p>
@@ -107,7 +111,8 @@
 
 <h2 id="retention">6. How long we keep data</h2>
 <ul>
-<li><strong>Account data</strong> (profile, allergies, household members, AI consent record, kitchen items, follow-up requests, recipes, cooking history, scan results, devices, usage events, feedback you sent, subscription record): until you delete your account. Items you delete in the app are marked deleted and removed with your account.</li>
+<li><strong>Account data</strong> (profile, allergies, household members, AI consent record, kitchen items, the messages you send in Cook, follow-up requests, recipes, cooking history, scan results, devices, usage events, feedback you sent, subscription record): until you delete your account. Items you delete in the app are marked deleted and removed with your account.</li>
+<li><strong>Profile photo:</strong> until you remove it in Profile (it is deleted from our storage right away) or delete your account.</li>
 <li><strong>Scan photos:</strong> never kept. Deleted right after they are read, failed scans included; any leftover upload is deleted automatically within 1 hour.</li>
 <li><strong>AI requests at Anthropic:</strong> deleted by Anthropic within 30 days, except where it must keep them longer to enforce its usage policies.</li>
 <li><strong>AI call logs:</strong> technical details only, kept for cost and abuse monitoring. When you delete your account they are kept without any link to you.</li>
@@ -121,7 +126,7 @@
 
 <h2 id="control">7. Your choices</h2>
 <h3>Delete your account</h3>
-<p>In the app, open <strong>Profile → Privacy &amp; receipt photos → Delete my account</strong>. This permanently deletes your account and the data we hold for it: profile and preferences, allergies, household members, AI consent record, kitchen items, follow-up requests and recipes, cooking history, scan results, devices, usage events and our subscription record.</p>
+<p>In the app, open <strong>Profile → Privacy &amp; receipt photos → Delete my account</strong>. This permanently deletes your account and the data we hold for it: profile and preferences, profile photo, allergies, household members, AI consent record, kitchen items, your Cook messages, follow-up requests and recipes, cooking history, scan results, devices, usage events and our subscription record.</p>
 <p>You can also ask for deletion without the app at <a href="../delete-account/">https://prepme-app.com/delete-account/</a>.</p>
 <p>If you signed in with Apple, the app asks you to confirm with Apple first, and we then ask Apple to revoke the sign-in link between PrepMe and your Apple ID. If you cancel that confirmation your account is kept; if Apple cannot be reached the account is still deleted, only without the revocation.</p>
 <p><strong>It does not cancel your subscription.</strong> Subscriptions continue to bill until you cancel them with Apple or Google Play (<a href="../support/#cancel">how</a>). The app tells you this and offers a Manage subscription button before you confirm the deletion.</p>
