@@ -51,6 +51,7 @@
 <tbody>
 <tr><th scope="row">Account</th><td>Sign in with Apple or Google gives us your email address (Apple may give a private relay address) and your name if you share it, plus an internal account ID. We never see your Apple or Google password.</td><td>Create and secure your account.</td></tr>
 <tr><th scope="row">Preferences</th><td>Display name, language, appearance, favourite cuisines, household size, and your choice to use history for suggestions.</td><td>Personalise the app and recipes.</td></tr>
+<tr><th scope="row">Country</th><td>A two-letter country code (for example EG) that the app reads from your SIM card or, if there is none, your mobile network. We never use GPS or ask for location permission, and phones without a SIM or mobile network send no country. It is stored on your profile.</td><td>Pick the Arabic dialect of recipe replies and your home cuisine. You can choose a different reply dialect in the app’s settings.</td></tr>
 <tr><th scope="row">Profile photo (optional)</th><td>The photo you choose for your profile, if you add one, and the time you last changed it. It is kept in private storage that only your account can reach, is shown only to you, and is never sent to the AI provider.</td><td>Show your photo in Profile on any of your devices.</td></tr>
 <tr><th scope="row">Allergies</th><td>The allergies you enter. They are stored with your account on our server so that they apply on any device, and they are included in recipe requests so that suggestions avoid them. Allergies can be sensitive.</td><td>Make recipes avoid what you cannot eat.</td></tr>
 <tr><th scope="row">Household members</th><td>The members you add in Profile: the name you give each one (up to 40 characters) and their allergies. Member names are never sent to the AI provider; only their allergies are, as food names.</td><td>Make recipes safe for everyone you cook for.</td></tr>
@@ -65,7 +66,7 @@
 <tr><th scope="row">Feedback you send</th><td>If you use Profile → Send feedback: the type you pick (suggestion, issue or praise), an optional star rating, the message you write, the app version and your language, linked to your account. Please do not write passwords or other private details in it. It is not sent to the AI provider.</td><td>Read your suggestions and problems and improve the app.</td></tr>
 <tr><th scope="row">Crash reports</th><td>If the app crashes, Firebase Crashlytics receives a crash log with the device model, OS and app version, and an installation identifier. We do not add your name or email to crash reports.</td><td>Find and fix crashes.</td></tr>
 </tbody></table></div>
-<p>We do not collect your contacts, your location, your advertising identifier, voice recordings or photos you do not choose to scan.</p>
+<p>We do not collect your contacts, your precise location, your advertising identifier, voice recordings or photos you do not choose to scan. The only location-related data is the country code above, read from your SIM or mobile network, never from GPS.</p>
 
 <h2 id="ai">2. AI recipes and follow-ups</h2>
 <p>The app asks for your agreement on its AI consent screen before your first AI or scan request, and asks again when this use changes. It sends nothing to the AI provider until you agree. You can withdraw your agreement by deleting your account or by writing to us; without it the AI and scan features cannot be used.</p>
@@ -111,7 +112,7 @@
 
 <h2 id="retention">6. How long we keep data</h2>
 <ul>
-<li><strong>Account data</strong> (profile, allergies, household members, AI consent record, kitchen items, the messages you send in Cook, follow-up requests, recipes, cooking history, scan results, devices, usage events, feedback you sent, subscription record): until you delete your account. Items you delete in the app are marked deleted and removed with your account.</li>
+<li><strong>Account data</strong> (profile including your country, allergies, household members, AI consent record, kitchen items, the messages you send in Cook, follow-up requests, recipes, cooking history, scan results, devices, usage events, feedback you sent, subscription record): until you delete your account. Items you delete in the app are marked deleted and removed with your account.</li>
 <li><strong>Profile photo:</strong> until you remove it in Profile (it is deleted from our storage right away) or delete your account.</li>
 <li><strong>Scan photos:</strong> never kept. Deleted right after they are read, failed scans included; any leftover upload is deleted automatically within 1 hour.</li>
 <li><strong>AI requests at Anthropic:</strong> deleted by Anthropic within 30 days, except where it must keep them longer to enforce its usage policies.</li>
