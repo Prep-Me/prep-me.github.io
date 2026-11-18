@@ -29,7 +29,7 @@
 </header>
 <main id="main" class="wrap">
 <h1>Privacy Policy</h1>
-<p class="meta">Effective date: 14 November 2026</p>
+<p class="meta">Effective date: 18 November 2026</p>
 
 <p class="lead">This policy explains what the PrepMe apps for iPhone and Android (“PrepMe”, “the app”) collect, why, who else handles it, how long we keep it, and what control you have. PrepMe (“we”, “us”) is the publisher and is responsible for your data. Contact: <a href="mailto:prepme.business@gmail.com">prepme.business@gmail.com</a>.</p>
 
@@ -40,6 +40,7 @@
 <li>Before you first use the AI and scan features, the app’s AI consent screen asks you to agree to how your data is sent to our AI provider, Anthropic (section 4). We keep a record of your agreement.</li>
 <li>Receipt and grocery photos are uploaded, read by AI and then deleted, failed scans included. We never keep them.</li>
 <li>Your recipe requests go through our own AI server to one AI provider: <strong>Anthropic</strong> (Claude), on its paid commercial service (section 4). Under its commercial terms, Anthropic does not train on this data and deletes it within 30 days, except where it must keep it longer to enforce its usage policies.</li>
+<li>Recipe videos are found on YouTube through YouTube API Services. Only search words made from the dish name are sent, never your account details (section 4).</li>
 <li>No ads. No tracking across other companies’ apps or sites. We do not sell your data.</li>
 <li>You can delete your account and export your data inside the app.</li>
 </ul>
@@ -102,9 +103,19 @@
 <tr><th scope="row">Firebase Crashlytics (Google)</th><td>Crash reports.</td><td>Google’s infrastructure; may include the United States</td></tr>
 <tr><th scope="row">Firebase Cloud Messaging (Google)</th><td>Push notifications, only if you allow them. It receives a token for your phone and delivers the messages we send. You can turn news and offers off in Profile → Notifications.</td><td>Google’s infrastructure; may include the United States</td></tr>
 <tr><th scope="row">Firebase Remote Config (Google)</th><td>App switches we can change without an app update, for example pausing a feature. The app downloads them; Google receives an app-installation ID and basic device and app details (platform, app version, language, country) with that request.</td><td>Google’s infrastructure; may include the United States</td></tr>
+<tr><th scope="row">YouTube API Services (Google)</th><td>Finding cooking videos for a recipe by the dish name (see “Recipe videos” below). It receives only the search words, the language and a region, never your account details.</td><td>Google’s infrastructure; may include the United States</td></tr>
 <tr><th scope="row">GitHub (Microsoft)</th><td>Stores our encrypted daily database backups (section 6). They are encrypted before upload and only we hold the key, so GitHub cannot read them.</td><td>United States</td></tr>
 </tbody></table></div>
 <p>These companies act on our behalf for the purposes above and have their own privacy policies. We share with them only what each service needs. This list can change; when it does, we will update this page and its effective date.</p>
+<h3 id="youtube">Recipe videos (YouTube API Services)</h3>
+<p>Some recipes show up to three cooking videos from YouTube and a link to a YouTube search for the dish. PrepMe uses <strong>YouTube API Services</strong> (the YouTube Data API) to find them. By using this feature you agree to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google handles the data YouTube receives under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+<ul>
+<li><strong>What is sent to YouTube:</strong> our server sends only search words made from the dish name (for example “Koshari recipe” or «طريقة عمل كشري»), the language and a region (Egypt or Saudi Arabia). It does not send your name, email, account ID, allergies, kitchen items or anything else about you.</li>
+<li><strong>What we store:</strong> the ID, title, channel name and thumbnail link of the videos found, per dish and language, not per user. We keep them for up to 30 days, then search again or delete them.</li>
+<li><strong>Safe search:</strong> searches use YouTube’s strict safe-search setting, and we hide videos whose title or channel names a food that is not halal or that conflicts with the choices made in the app.</li>
+<li><strong>Watching:</strong> videos do not play inside PrepMe. Tapping one opens it in the YouTube app or website, where the YouTube Terms of Service and Google’s privacy policy apply. Thumbnails are loaded from YouTube’s image servers, which, like any website, receive your device’s IP address.</li>
+<li><strong>Your YouTube account:</strong> PrepMe does not sign in to YouTube or Google for this feature and does not access your YouTube account or its data. You can see and remove the access of any app connected to your Google account in <a href="https://myaccount.google.com/permissions">Google’s security settings</a>.</li>
+</ul>
 
 <h2 id="no-sale">5. No ads, no tracking, no sale</h2>
 <p>PrepMe shows no ads and contains no advertising or cross-app tracking. We do not sell or rent your personal data and we do not share it for advertising. We may disclose data if the law requires it or to protect our rights and users’ safety.</p>
@@ -120,6 +131,7 @@
 <li><strong>AI server and its monitoring traces:</strong> our AI server keeps no user data. The traces in our own Langfuse are redacted technical details (steps, model, timings, token counts, errors) kept on our own server for monitoring.</li>
 <li><strong>Usage analytics:</strong> kept by Google Analytics for a limited period under our settings. They are not linked to your PrepMe account, so deleting the account does not remove them.</li>
 <li><strong>Crash reports:</strong> kept by Firebase for a limited period under its settings.</li>
+<li><strong>Recipe video results:</strong> video IDs, titles, channel names and thumbnail links from YouTube, stored per dish and language (not per user) for up to 30 days.</li>
 <li><strong>Billing records:</strong> kept by Apple or Google Play, and RevenueCat, under their policies and the law.</li>
 <li><strong>Backups:</strong> an encrypted copy of our database is made every day and kept for 30 days, then deleted. Only we hold the key. Data you delete stays in those copies until they expire.</li>
 <li><strong>Server logs:</strong> kept for a short period by Supabase and our AI server, then overwritten.</li>
