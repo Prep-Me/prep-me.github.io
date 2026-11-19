@@ -36,7 +36,7 @@
 <div class="note">
 <h2>The short version</h2>
 <ul>
-<li>You sign in with Apple or Google. We keep your email and name, plus what you add: kitchen items, recipes, follow-up requests, allergies and preferences.</li>
+<li>You sign in with Apple or Google. We keep your email and name, plus what you add: kitchen items, recipes, follow-up requests and preferences. Your allergies and household members stay on your phone (see below).</li>
 <li>Before you first use the AI and scan features, the app’s AI consent screen asks you to agree to how your data is sent to our AI provider, Anthropic (section 4). We keep a record of your agreement.</li>
 <li>Receipt and grocery photos are uploaded, read by AI and then deleted, failed scans included. We never keep them.</li>
 <li>Your recipe requests go through our own AI server to one AI provider: <strong>Anthropic</strong> (Claude), on its paid commercial service (section 4). Under its commercial terms, Anthropic does not train on this data and deletes it within 30 days, except where it must keep it longer to enforce its usage policies.</li>
@@ -54,8 +54,8 @@
 <tr><th scope="row">Preferences</th><td>Display name, language, appearance, favourite cuisines, household size, and your choice to use history for suggestions.</td><td>Personalise the app and recipes.</td></tr>
 <tr><th scope="row">Country</th><td>A two-letter country code (for example EG) that the app reads from your SIM card or, if there is none, your mobile network. We never use GPS or ask for location permission, and phones without a SIM or mobile network send no country. It is stored on your profile.</td><td>Pick the Arabic dialect of recipe replies and your home cuisine. You can choose a different reply dialect in the app’s settings.</td></tr>
 <tr><th scope="row">Profile photo (optional)</th><td>The photo you choose for your profile, if you add one, and the time you last changed it. It is kept in private storage that only your account can reach, is shown only to you, and is never sent to the AI provider.</td><td>Show your photo in Profile on any of your devices.</td></tr>
-<tr><th scope="row">Allergies</th><td>The allergies you enter. They are stored with your account on our server so that they apply on any device, and they are included in recipe requests so that suggestions avoid them. Allergies can be sensitive.</td><td>Make recipes avoid what you cannot eat.</td></tr>
-<tr><th scope="row">Household members</th><td>The members you add in Profile: the name you give each one (up to 40 characters) and their allergies. Member names are never sent to the AI provider; only their allergies are, as food names.</td><td>Make recipes safe for everyone you cook for.</td></tr>
+<tr><th scope="row">Allergies</th><td>The allergies you enter. Allergies are health information. They are kept only on your phone, encrypted, and are never stored on our servers. Each recipe request carries them so that suggestions avoid them; our server and our AI provider use them for that request only and do not keep them. A new phone does not get them: the app asks for them before the first recipe.</td><td>Make recipes avoid what you cannot eat.</td></tr>
+<tr><th scope="row">Household members</th><td>The members you add in Profile: the name you give each one (up to 40 characters) and their allergies. They are kept only on your phone, like your allergies. Member names are never sent anywhere; only their allergies travel with each recipe request, as food names.</td><td>Make recipes safe for everyone you cook for.</td></tr>
 <tr><th scope="row">AI consent</th><td>The date of your agreement, given on the in-app AI consent screen, to send kitchen items, allergies, meal requests and photos to our AI provider. The record is stored with your account.</td><td>Show that you agreed, and ask again when this use changes.</td></tr>
 <tr><th scope="row">Kitchen items, follow-ups and recipes</th><td>Kitchen items (name, quantity, unit, category, price, estimated expiry), the follow-up choices you tap on a recipe (for example “something quicker” or “different dishes”), the recipes returned, what you cooked, and your monthly usage counts.</td><td>Provide the app, sync between devices, enforce Free and Pro limits.</td></tr>
 <tr><th scope="row">Receipt and grocery photos</th><td>Photos you choose to scan, and the items read from them.</td><td>Fill your kitchen. See section 3.</td></tr>
@@ -123,7 +123,8 @@
 
 <h2 id="retention">6. How long we keep data</h2>
 <ul>
-<li><strong>Account data</strong> (profile including your country, allergies, household members, AI consent record, kitchen items, the messages you send in Cook, follow-up requests, recipes, cooking history, scan results, devices, usage events, feedback you sent, subscription record): until you delete your account. Items you delete in the app are marked deleted and removed with your account.</li>
+<li><strong>Allergies and household members:</strong> on your phone only, until you change them or sign out. Our server and our AI provider do not keep them after a request.</li>
+<li><strong>Account data</strong> (profile including your country, AI consent record, kitchen items, the messages you send in Cook, follow-up requests, recipes, cooking history, scan results, devices, usage events, feedback you sent, subscription record): until you delete your account. Items you delete in the app are marked deleted and removed with your account.</li>
 <li><strong>Profile photo:</strong> until you remove it in Profile (it is deleted from our storage right away) or delete your account.</li>
 <li><strong>Scan photos:</strong> never kept. Deleted right after they are read, failed scans included; any leftover upload is deleted automatically within 1 hour.</li>
 <li><strong>AI requests at Anthropic:</strong> deleted by Anthropic within 30 days, except where it must keep them longer to enforce its usage policies.</li>
@@ -139,15 +140,15 @@
 
 <h2 id="control">7. Your choices</h2>
 <h3>Delete your account</h3>
-<p>In the app, open <strong>Profile → Privacy &amp; receipt photos → Delete my account</strong>. This permanently deletes your account and the data we hold for it: profile and preferences, profile photo, allergies, household members, AI consent record, kitchen items, your Cook messages, follow-up requests and recipes, cooking history, scan results, devices, usage events and our subscription record.</p>
+<p>In the app, open <strong>Profile → Privacy &amp; receipt photos → Delete my account</strong>. This permanently deletes your account and the data we hold for it: profile and preferences, profile photo, AI consent record, kitchen items, your Cook messages, follow-up requests and recipes, cooking history, scan results, devices, usage events and our subscription record. Your allergies and household members are not on our servers; they leave with the app's data on your phone.</p>
 <p>You can also ask for deletion without the app at <a href="../delete-account/">https://prepme-app.com/delete-account/</a>.</p>
 <p>If you signed in with Apple, the app asks you to confirm with Apple first, and we then ask Apple to revoke the sign-in link between PrepMe and your Apple ID. If you cancel that confirmation your account is kept; if Apple cannot be reached the account is still deleted, only without the revocation.</p>
 <p><strong>It does not cancel your subscription.</strong> Subscriptions continue to bill until you cancel them with Apple or Google Play (<a href="../support/#cancel">how</a>). The app tells you this and offers a Manage subscription button before you confirm the deletion.</p>
 <p>Deleting your account also does not remove data held by Apple, RevenueCat, Google or Anthropic under their own policies, analytics data or crash reports until Google expires them.</p>
 <h3>Export your data</h3>
-<p>In the app, open <strong>Profile → Privacy &amp; receipt photos</strong> and choose the export option to save the data we hold about you as a file (JSON): your account details, preferences, allergies, household members, AI consent record, kitchen items, follow-up requests, recipes, cooking and scan history, usage counts, devices and subscription record. Scan photos are not included because they are never kept.</p>
+<p>In the app, open <strong>Profile → Privacy &amp; receipt photos</strong> and choose the export option to save the data we hold about you as a file (JSON): your account details, preferences, AI consent record, kitchen items, follow-up requests, recipes, cooking and scan history, usage counts, devices and subscription record. Scan photos are not included because they are never kept. Your allergies and household members are not in the file because we do not hold them; you can see them in Profile.</p>
 <h3>Signing out</h3>
-<p>Signing out removes the copy of your kitchen, recipes, follow-ups, allergies and consent that the app keeps on that phone, so the next person who signs in sees none of it. Your data stays in your account and comes back when you sign in again.</p>
+<p>Signing out removes the copy of your kitchen, recipes, follow-ups and consent that the app keeps on that phone, and your allergies and household members, so the next person who signs in sees none of it. Your account data comes back when you sign in again; your allergies are not in your account, so the app asks for them again before the first recipe.</p>
 <h3>Other requests</h3>
 <p>To correct data, ask a question, or exercise any of the rights in section 10, write to <a href="mailto:prepme.business@gmail.com">prepme.business@gmail.com</a>. We will answer within a reasonable time and may need to confirm that the request comes from you.</p>
 
