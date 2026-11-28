@@ -50,4 +50,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://prepme-app.com/delete-account/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://prepme-app.com/ar/delete-account/"/>
   </url>
+  <url>
+    <loc>https://prepme-app.com/consumer-health-data/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prepme-app.com/consumer-health-data/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://prepme-app.com/ar/consumer-health-data/"/>
+  </url>
+  <url>
+    <loc>https://prepme-app.com/ar/consumer-health-data/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prepme-app.com/consumer-health-data/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://prepme-app.com/ar/consumer-health-data/"/>
+  </url>
 </urlset>
